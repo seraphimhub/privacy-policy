@@ -8,46 +8,88 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;600&family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'DM Sans', sans-serif;
-    background: #0a0a0a;
+    background: radial-gradient(circle at top, #111 0%, #050505 100%);
     color: #eaeaea;
+    line-height: 1.7;
 }
 
-.container {
-    max-width: 800px;
-    margin: 80px auto;
-    padding: 30px;
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 60px 20px 30px;
 }
 
-h1 {
+.header h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
+    font-size: 48px;
     color: #d4af37;
-    margin-bottom: 10px;
+}
+
+.header p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* CARD */
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(212,175,55,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 60px rgba(212,175,55,0.15);
 }
 
 h2 {
     color: #d4af37;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 p {
-    line-height: 1.7;
     color: #ccc;
+    margin-top: 10px;
 }
 
-.card {
-    background: #111;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.08);
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #d4af37;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
+.btn:hover {
+    background: #f5d76e;
+}
+
+/* FOOTER */
 .footer {
     text-align: center;
-    margin-top: 40px;
+    margin: 40px 0;
     font-size: 13px;
     color: #777;
 }
@@ -56,16 +98,18 @@ p {
 
 <body>
 
+<div class="header">
+    <h1>Privacy Policy</h1>
+    <p>Seraphim Tech & Security</p>
+</div>
+
 <div class="container">
     <div class="card">
-        <h1>Privacy Policy</h1>
-        <p><strong>Seraphim Tech & Security</strong></p>
-
         <h2>1. Informasi yang Dikumpulkan</h2>
-        <p>Kami dapat mengumpulkan informasi seperti nama, nomor kontak, dan detail perangkat hanya untuk keperluan layanan.</p>
+        <p>Kami mengumpulkan informasi seperti nama, nomor kontak, dan detail perangkat hanya untuk keperluan layanan.</p>
 
         <h2>2. Penggunaan Informasi</h2>
-        <p>Informasi digunakan untuk memberikan layanan, komunikasi dengan pelanggan, dan peningkatan kualitas layanan.</p>
+        <p>Informasi digunakan untuk memberikan layanan terbaik, komunikasi dengan pelanggan, serta peningkatan kualitas layanan.</p>
 
         <h2>3. Keamanan Data</h2>
         <p>Kami menjaga keamanan dan kerahasiaan data pelanggan dan tidak membagikannya kepada pihak ketiga tanpa izin.</p>
@@ -74,12 +118,14 @@ p {
         <p>Dengan menggunakan layanan kami, Anda menyetujui kebijakan privasi ini.</p>
 
         <h2>5. Kontak</h2>
-        <p>Untuk pertanyaan, silakan hubungi melalui halaman resmi Seraphim Tech & Security.</p>
-    </div>
+        <p>Untuk pertanyaan lebih lanjut, silakan hubungi kami melalui halaman resmi.</p>
 
-    <div class="footer">
-        © 2026 Seraphim Tech & Security — All Rights Reserved
+        <a href="#" class="btn">Hubungi Sekarang</a>
     </div>
+</div>
+
+<div class="footer">
+    © 2026 Seraphim Tech & Security — All Rights Reserved
 </div>
 
 </body>
